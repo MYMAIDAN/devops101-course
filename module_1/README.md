@@ -14,4 +14,3 @@ cargo run --release
 ```bash
 kubectl port-forward deploy/demo 8080
 ```
-

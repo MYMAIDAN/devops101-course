@@ -9,4 +9,3 @@ ADD ./html /html
 COPY --from=build /usr/src/app/target/release/devops101-course /usr/local/bin/app
 ENTRYPOINT [ "app" ]
 EXPOSE 8080
-

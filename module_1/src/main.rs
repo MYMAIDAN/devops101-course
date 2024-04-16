@@ -1,6 +1,8 @@
+use axum::extract::Request;
 use axum::{
     extract::Request, handler::HandlerWithoutStateExt, http::StatusCode, routing::get, Router,
 };
+
 use std::net::SocketAddr;
 use tower::ServiceExt;
 use tower_http::{
@@ -15,10 +17,8 @@ async fn main() {
         .with(tracing_subscriber::fmt::layer())
         .init();
 
-        serve(using_serve_file_from_a_route(), 8080).await;
+    serve(using_serve_file_from_a_route(), 8080).await;
 }
-
-
 
 fn using_serve_file_from_a_route() -> Router {
     Router::new().nest_service("/", ServeDir::new("./html"))
