@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: database-sync-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: database-sync-container
+        image: database-sync-image
+        command: ["database-sync-script.sh"]
+      restartPolicy: Never

@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ping-google
+spec:
+  schedule: "0 0 */5 * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: ping-google
+            image: busybox
+            args:
+            - /bin/sh
+            - -c
+            - "ping -c 3 google.com"
+          restartPolicy: OnFailure
