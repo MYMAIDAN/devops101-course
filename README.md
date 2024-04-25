@@ -17,7 +17,7 @@
         <th>Application Pod</th>
         <th>Create pod for this image</th>
         <th>Creating Pod manifest file for echo server</th>
-        <th><a href="./yaml/app/yaml">app.yaml</a></th>
+        <th><a href="./yaml/app.yaml">app.yaml</a></th>
     </tr>
     <tr>
         <th>LivenessProbe</th>
@@ -57,7 +57,17 @@ re 5 times, success 1 time, period 20 sec</th>
         <th>Set resource request and limitation</th>
         <th><a href="./yaml/app-resources.yaml">resources.yaml</a></th>
     </tr>
-
-
+    <tr>
+        <th>Multicontainer</th>
+        <th>create pod with two container, 1 just a nginx server, 2 write data to nginx server</th>
+        <th>Create ngix server and writer</th>
+        <th><a href="./yaml/app-multicontainer.yaml">multicontainer.yaml</a></th>
+    </tr>
+    <tr>
+        <th>Create Secret</th>
+        <th>create secret for postgress database with username and password</th>
+        <th>Creating secred for database pod with username and password</th>
+        <th><a href="./yaml/app-secret.yaml">secret.yaml</a></th>
+    </tr>
 </table>
 
