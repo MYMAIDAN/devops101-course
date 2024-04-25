@@ -67,7 +67,7 @@ re 5 times, success 1 time, period 20 sec</th>
         <th>Create Secret</th>
         <th>create secret for postgress database with username and password</th>
         <th>Creating secred for database pod with username and password</th>
-        <th><a href="./yaml/app-secret.yaml">secret.yaml</a></th>
+        <th><a href="./yaml/app-secret-env.yaml">secret.yaml</a></th>
     </tr>
 </table>
 
